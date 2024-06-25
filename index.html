@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Agenda de contatos</h1>
+        </header>
+        <form id="formAgenda">
+            <input id="inputNome" type="text" required placeholder="Digite seu nome..."/>
+            <input id="inputTel" type="number" required placeholder="Digite seu telefone..."/>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Contato:</th>
+                    <th>Telefone:</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        ...
+                    </td>
+                    <td>
+                        ...
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <script>
+            const form = document.getElementById('formAgenda');
+            const linhas = []; // Array para armazenar as linhas da tabela
+
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                adicionaLinha();
+                atualizaTabela();
+            });
+            
+            function adicionaLinha(){
+                const inputNome = document.getElementById('inputNome');
+                const inputTel = document.getElementById('inputTel');
+            
+                // Criando a linha HTML da tabela
+                let linha = '<tr>';
+                linha += `<td>${inputNome.value}</td>`;
+                linha += `<td>${inputTel.value}</td>`;
+                linha += '</tr>';
+            
+                // Adicionando a linha ao array de linhas
+                linhas.push(linha);
+            
+                // Limpando os campos do formulário
+                inputNome.value = '';
+                inputTel.value = '';
+            }
+            
+            function atualizaTabela(){
+                const corpoTabela = document.querySelector('tbody');
+                corpoTabela.innerHTML = linhas.join('');
+            }
+
+            </script>
+    </div>
+
+</body>
+</html>

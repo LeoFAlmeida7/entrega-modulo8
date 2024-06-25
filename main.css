@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 2000px;
+    width: 100%;
+    background-color: beige;
+    font-family: "Playwrite MX", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+
+header{
+    display: flex;
+    background-image: linear-gradient( 135deg, #FFA8A8 10%, #FCFF00 100%);;
+    padding: 25px;
+    color: white;
+    justify-content: center;
+    
+}
+
+header h1{
+    font-size: 40px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 56px 0;
+    max-width: 2000px;
+    justify-content: center;
+    
+}
+
+form input{
+    margin: 0 40px;
+    font-size: 24px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid #fff01e;
+    padding: 8px;
+    font-family: "Playwrite MX", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+form button{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px;
+    color: white;
+    background-color: green;
+    font-family: "Playwrite MX", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    cursor: pointer;
+    border:none;
+
+}
+
+table th{
+    color: black;
+    border-bottom: 2px solid #fff01e;
+    font-weight: bold;
+    border-top: 2px solid #fff01e;
+}
+
+table td{
+    border-top: 2px solid #fff01e;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 2000px;
+    width: 100%;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
+}
